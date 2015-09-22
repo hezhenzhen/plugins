@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zhong Guo</title>
+    <style>
+    *{margin: 0; padding: 0;}
+    ul, ul li{ list-style: none;}
+    body{
+        overflow-x: hidden;
+    }
+    .content{
+        width: 1440px;
+        height: 900px;
+        margin: 0 auto;
+        position: relative;
+    }
+    
+    .layer:nth-child(1) img {
+        position: absolute;
+        top: 700px;
+        left: 50%;
+        margin-left:-922px;
+    }
+    .layer:nth-child(2) img {
+        position: absolute;
+        top: 148px;
+        left: 460px;
+    }
+    .layer:nth-child(3) img {
+        position: absolute;
+        top: 577px;
+        left: 587px;
+    }
+    .layer:nth-child(4) img {
+        position: absolute;
+        top: 428px;
+        left: 96px;
+    }
+    .layer:nth-child(5) img {
+        position: absolute;
+        top: 655px;
+        left: 272px;
+    }
+    .layer:nth-child(6) img {
+        position: absolute;
+        top: 539px;
+        left: 1075px;
+    }
+    .layer:nth-child(7) img {
+        position: absolute;
+        top: 631px;
+        left: 1296px;
+    }
+    .layer:nth-child(8) img {
+        position: absolute;
+        top: 775px;
+        left: 868px;
+    }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <ul id="scene">
+            <li class="layer" data-depth="0.10"><img src="img/nianlun4.png" alt=""></li>
+            <!-- 水 -->
+            <li class="layer" data-depth="0.20"><img src="img/nianlun1.png" alt=""></li>
+            <!-- 最大 -->
+            <li class="layer" data-depth="0.30"><img src="img/nianlun2.png" alt=""></li>
+            <!-- 小 -->
+            <li class="layer" data-depth="0.20"><img src="img/nianlun3.png" alt=""></li>
+            <!-- 小二 -->
+            <li class="layer" data-depth="0.30"><img src="img/nianlun5.png" alt=""></li>
+            <li class="layer" data-depth="0.40"><img src="img/nianlun6.png" alt=""></li>
+            <li class="layer" data-depth="0.30"><img src="img/nianlun7.png" alt=""></li>
+            <li class="layer" data-depth="0.10"><img src="img/boat.png" alt=""></li>
+        </ul>
+    </div>
+    <script src='js/jquery.js'></script>
+    <script src='js/jquery.parallax.js'></script>
+    <script>
+    $(function(){
+        $("#scene").parallax();
+    })
+    </script> 
+</body>
+</html>

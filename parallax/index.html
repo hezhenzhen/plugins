@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Parallax</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        ul, ul li{ list-style: none}
+        body{ background: #000;}
+        .content{
+            width: 600px;
+            height: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .layer:nth-child(1) {
+          opacity: 1.00;
+        }
+        .layer:nth-child(2) {
+            opacity: 0.90;
+        }
+        .layer:nth-child(3) {
+            opacity: 0.80;
+        }
+        .layer:nth-child(4) {
+            opacity: 0.70;
+        }
+        .layer:nth-child(5) {
+            opacity: 0.60;
+        }
+        .layer:nth-child(6) {
+            opacity: 0.50;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <ul id="scene">
+          <li class="layer" data-depth="0.00"><img src="images/layer1.png"></li>
+          <li class="layer" data-depth="0.20"><img src="images/layer2.png"></li>
+          <li class="layer" data-depth="0.40"><img src="images/layer3.png"></li>
+          <li class="layer" data-depth="0.60"><img src="images/layer4.png"></li>
+          <li class="layer" data-depth="0.80"><img src="images/layer5.png"></li>
+          <li class="layer" data-depth="1.00"><img src="images/layer6.png"></li>
+        </ul>
+    </div>
+    <script src='js/jquery.js'></script>
+    <script src='js/jquery.parallax.js'></script>
+    <script>
+    $(function(){
+        $("#scene").parallax();
+    })
+    </script>
+</body>
+</html>
